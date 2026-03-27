@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Lifestyle Story</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="navbar">
+
+    <a href="index.html">AI Chat</a>
+    <a href="simulate.html">What-If Simulator</a>
+    <a href="story.html">Lifestyle Story</a>
+    <a href="dosha.html">Ayurvedic Profile</a>
+
+  </div>
+
+
+  <section class="story-container">
+
+    <h2>Your Ayurvedic Lifestyle Journey</h2>
+
+    <p class="story-subtitle">
+      Every small decision shifts your Dosha balance. Experience your body's story.
+    </p>
+
+    <div id="progress-bar"></div>
+
+    <div id="story-stage"></div>
+
+    <div id="story-result"></div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+  <script>
+    const links = document.querySelectorAll(".navbar a");
+    links.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add("active");
+      }
+    });
+  </script>
+
+</body>
+
+</html>

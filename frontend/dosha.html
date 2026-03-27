@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ayurvedic Profile</title>
+
+  <link rel="stylesheet" href="dosha.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="index.html">AI Chat</a>
+    <a href="simulate.html">What-If Simulator</a>
+    <a href="story.html">Lifestyle Story</a>
+    <a href="dosha.html" class="active">Ayurvedic Profile</a>
+  </div>
+
+  <div class="container">
+
+    <h1>Ayurvedic Profile Assessment</h1>
+    <p class="subtitle">Answer honestly to understand your body constitution</p>
+
+    <div class="card quiz">
+
+      <h3>1. Body Structure</h3>
+      <label><input type="radio" name="q1" value="vata"> Thin, light, difficulty gaining weight</label>
+      <label><input type="radio" name="q1" value="pitta"> Medium, muscular, warm body</label>
+      <label><input type="radio" name="q1" value="kapha"> Heavy, broad, gains weight easily</label>
+
+      <h3>2. Appetite Pattern</h3>
+      <label><input type="radio" name="q2" value="vata"> Irregular hunger</label>
+      <label><input type="radio" name="q2" value="pitta"> Strong and frequent hunger</label>
+      <label><input type="radio" name="q2" value="kapha"> Slow digestion, low hunger</label>
+
+      <h3>3. Energy Levels</h3>
+      <label><input type="radio" name="q3" value="vata"> Quick bursts, easily tired</label>
+      <label><input type="radio" name="q3" value="pitta"> Moderate, consistent energy</label>
+      <label><input type="radio" name="q3" value="kapha"> Slow but long-lasting energy</label>
+
+      <h3>4. Sleep Pattern</h3>
+      <label><input type="radio" name="q4" value="vata"> Light and disturbed</label>
+      <label><input type="radio" name="q4" value="pitta"> Moderate sleep</label>
+      <label><input type="radio" name="q4" value="kapha"> Deep and long sleep</label>
+
+      <h3>5. Mental Nature</h3>
+      <label><input type="radio" name="q5" value="vata"> Creative but anxious</label>
+      <label><input type="radio" name="q5" value="pitta"> Focused but intense</label>
+      <label><input type="radio" name="q5" value="kapha"> Calm but slow</label>
+
+      <button onclick="generateProfile()">Analyze</button>
+
+    </div>
+
+    <div id="result" class="hidden">
+
+      <div class="chart-box">
+        <canvas id="chart"></canvas>
+      </div>
+
+      <div id="dosha-cards"></div>
+
+      <div id="analysis"></div>
+
+    </div>
+
+  </div>
+
+  <script src="dosha.js"></script>
+</body>
+
+</html>

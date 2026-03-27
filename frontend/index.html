@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VedaMind AI</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="navbar">
+
+    <a href="index.html">AI Chat</a>
+    <a href="simulate.html">What-If Simulator</a>
+    <a href="story.html">Lifestyle Story</a>
+    <a href="dosha.html">Ayurvedic Profile</a>
+
+  </div>
+
+
+  <div class="content">
+
+    <h1>VedaMind AI</h1>
+
+    <p class="subtitle">
+      Ayurvedic Reasoning & Lifestyle Intelligence
+    </p>
+
+
+    <textarea id="user-input" placeholder="Ask about Doshas, Agni, Prakriti, Lifestyle...">
+</textarea>
+
+
+    <div class="button-row">
+
+      <button class="primary-btn" onclick="sendMessage()">
+        <i class="fa-solid fa-brain"></i> Analyze
+      </button>
+
+      <button class="secondary-btn speak-btn" onclick="startListening()">
+        <i class="fa-solid fa-microphone"></i> Speak
+      </button>
+
+    </div>
+
+
+    <div class="suggestions">
+
+      <div class="suggestion-card"
+        onclick="quickPrompt('Explain Prakriti in Ayurveda and how it affects my body type')">
+        <strong>Understand Your Prakriti</strong>
+        <p>Learn how your natural body constitution influences health and lifestyle.</p>
+      </div>
+
+      <div class="suggestion-card"
+        onclick="quickPrompt('What are the long-term effects of sleeping at 2AM daily according to Ayurveda?')">
+        <strong>Late Night Lifestyle Impact</strong>
+        <p>See how irregular sleep affects your energy, digestion, and mental clarity.</p>
+      </div>
+
+      <div class="suggestion-card"
+        onclick="quickPrompt('How does weak Agni lead to diseases and what are its symptoms?')">
+        <strong>Weak Agni & Health</strong>
+        <p>Understand how poor digestion can lead to toxin buildup and imbalance.</p>
+      </div>
+
+    </div>
+
+
+    <div id="response-area"></div>
+
+
+    <div class="response-actions">
+
+      <button class="primary-btn" onclick="speakResponse()">
+        <i class="fa-solid fa-volume-high"></i> Listen
+      </button>
+
+      <button class="primary-btn" onclick="stopSpeech()">
+        <i class="fa-solid fa-stop"></i> Stop
+      </button>
+
+      <button class="primary-btn" onclick="downloadPDF()">
+        <i class="fa-solid fa-file-pdf"></i> Download PDF
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+  <script>
+
+    const links = document.querySelectorAll(".navbar a");
+
+    links.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add("active");
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

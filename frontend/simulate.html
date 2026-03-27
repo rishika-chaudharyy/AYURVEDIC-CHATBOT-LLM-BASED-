@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What-If Simulator</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="navbar">
+
+    <a href="index.html">AI Chat</a>
+    <a href="simulate.html">What-If Simulator</a>
+    <a href="story.html">Lifestyle Story</a>
+    <a href="dosha.html">Ayurvedic Profile</a>
+
+  </div>
+
+
+  <div class="content">
+
+    <h1>What-If Lifestyle Simulator</h1>
+
+    <textarea id="whatif-input" placeholder="Example: What if I drink cold water every night?">
+</textarea>
+
+
+    <div class="button-row">
+
+      <button class="primary-btn" onclick="sendWhatIf()">
+        <i class="fa-solid fa-rocket"></i> Simulate
+      </button>
+
+      <button class="secondary-btn speak-btn" onclick="startListeningWhatIf()">
+        <i class="fa-solid fa-microphone"></i> Speak
+      </button>
+
+    </div>
+
+
+    <div id="whatif-response"></div>
+
+
+    <div class="response-actions">
+
+      <button class="primary-btn" onclick="speakWhatIfResponse()">
+        <i class="fa-solid fa-volume-high"></i> Listen
+      </button>
+
+      <button class="primary-btn" onclick="stopSpeech()">
+        <i class="fa-solid fa-stop"></i> Stop
+      </button>
+
+      <button class="primary-btn" onclick="downloadWhatIfPDF()">
+        <i class="fa-solid fa-file-pdf"></i> Download PDF
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+  <script>
+    const links = document.querySelectorAll(".navbar a");
+    links.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add("active");
+      }
+    });
+  </script>
+
+</body>
+
+</html>
